@@ -1,9 +1,0 @@
-Weed Detection
-https://www.kaggle.com/datasets/vbookshelf/v2-plant-seedlings-dataset  :- This contains data for Maize and other weed. It is labelled but not sure if the weed in this dataset is native or grows in India
-
-https://www.kaggle.com/datasets/ravirajsinh45/crop-and-weed-detection-data-with-bounding-boxes/data  :- This data set contains only 2 distinct classes, Crop and Weed. The crop is believed to sesame plant while the weed is a generalised category. This dataset is created by an Indian so the weed data is probably from India as well.
-
-Research Papers
-https://paperswithcode.com/paper/crop-yield-prediction-using-deep-neural
-https://paperswithcode.com/dataset/cropandweed-dataset     this dataset can be accessed here   https://huggingface.co/datasets/timm/objectnet
-https://github.com/cropandweed/cropandweed-dataset/blob/main/README.md
