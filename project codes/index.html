@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weed Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css//style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌾 Weed Detection System 🌿</h1>
+        <p>Upload an image to identify crops and weeds in your field.</p>
+        
+        <div class="upload-section">
+            <label for="imageInput" class="upload-label">📁 Select Image</label>
+            <input type="file" id="imageInput" accept="image/*" onchange="previewImage(event)">
+            
+            <div class="thumbnail-container">
+                <img id="previewThumbnail" src="#" alt="Selected image preview" class="thumbnail-preview" style="display:none;">
+                <p id="thumbnailLabel" class="thumbnail-label" style="display: none;">Selected Image</p>
+            </div>
+            <button onclick="uploadImage()">🔍 Detect</button>
+        </div>
+
+        <div class="result-section" style="display:none;" id="resultSection">
+            <h2>Detection Result:</h2>
+            <img id="outputImage" src="#" alt="Detection output will appear here">
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js//script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Detection Interface</title>
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌾 Weed Detection System 🌿</h1>
+    <p>Upload an image to identify crops and weeds in your field.</p>
+    
+    <!-- Upload Section -->
+    <div class="upload-section">
+      <label for="imageInput" class="upload-label">📁 Select Image</label>
+      <input type="file" id="imageInput" accept="image/*" style="display:none" onchange="previewImage(event)">
+  
+    <!-- Centered thumbnail with label -->
+    <div class="thumbnail-container">
+      <img id="previewThumbnail" src="#" alt="Selected image preview" class="thumbnail-preview" style="display:none;">
+      <p id="thumbnailLabel" class="thumbnail-label" style="display: none;">Selected Image</p>
+    </div>
+
+    <button onclick="uploadImage()">🔍 Detect</button>
+   </div>
+
+<!-- Result Section -->
+<div class="result-section" style="display:none;" id="resultSection">
+  <h2>Detection Result:</h2>
+  <img id="outputImage" src="#" alt="Detection output will appear here">
+</div>
+
+  <!-- External JavaScript file -->
+  <script src="script.js"></script>
+
+  <!-- Inline JavaScript for preview function -->
+  <script>
+  // Preview selected image as a thumbnail
+function previewImage(event) {
+    const thumbnail = document.getElementById('previewThumbnail');
+    const label = document.getElementById('thumbnailLabel');
+
+    const file = event.target.files[0];
+    if (file) {
+        thumbnail.src = URL.createObjectURL(file); // Display the thumbnail
+        thumbnail.style.display = 'block'; // Show thumbnail
+        label.style.display = 'block'; // Show label
+    }
+}
+
+// Function to handle image detection (placeholder)
+function uploadImage() {
+    const imageInput = document.getElementById('imageInput');
+    const resultSection = document.getElementById('resultSection');
+    const outputImage = document.getElementById('outputImage');
+
+    if (imageInput.files.length === 0) {
+        alert("Please select an image first.");
+        return;
+    }
+
+    const file = imageInput.files[0];
+    outputImage.src = URL.createObjectURL(file); // Simulate detection result
+    resultSection.style.display = 'block'; // Show the result section
+}
+  </script>
+</body>
+</html>

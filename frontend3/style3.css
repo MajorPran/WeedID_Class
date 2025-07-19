@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('field.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.upload-label {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    background: linear-gradient(to right, #FFA500, #FF6347);
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+}
+
+.upload-label:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #FF4500, #FFD700);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  font-size: 2.0rem;
+  margin-bottom: 10px;
+  color: #FFD700;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #ddd;
+}
+
+.upload-section {
+  margin: 25px 0;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+label {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to right, #FFA500, #FF6347);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+label:hover {
+  transform: scale(1.05);
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to right, #FFD700, #FFA500);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  margin-top: 15px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, #FF4500, #FFD700);
+}
+
+.result-section {
+  margin-top: 30px;
+}
+
+.result-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #FFD700;
+  font-weight: 500;
+  text-shadow: 0px 2px 8px rgba(255, 215, 0, 0.8);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  display: none; /* Initially hidden */
+  margin-top: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Additional styling for animations */
+@keyframes fadeInImage {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.thumbnail-preview {
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.thumbnail-label {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin-top: 5px;
+  text-align: center;
+}

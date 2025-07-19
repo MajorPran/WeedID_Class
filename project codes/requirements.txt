@@ -1,0 +1,10 @@
+flask
+flask-cors
+torch
+torchvision
+pillow
+ultralytics
+opencv-python-headless
+pycocotools
+tqdm
+pyyaml

@@ -1,0 +1,104 @@
+% thesis.tex
+%
+% This file is root file for an example thesis written using the
+% IIT Bombay LaTeX Style file.
+% Created by Amey Karkare (21 June 2007)
+%
+% It is provided without warranty on an AS IS basis.
+
+%=====================================================================
+% Read: http://www.cse.iitb.ac.in/karkare/iitbthesis/
+%    FAQ.txt     for frequently asked quetions
+%    Changes.txt for changes
+%    README      for more information
+%=====================================================================
+
+%=====================================================================
+% DOCUMENT STYLE
+%=====================================================================
+% IITB PhD Thesis format default settings are:
+%   12pt, one-sided printing on a4 size paper
+\documentclass{iitbthesis}
+% For two-sided printing, with Chapter starting on odd-numbered pages,
+% use the following line instead:
+%%\documentclass[openright,twoside]{iitbthesis}
+
+%=====================================================================
+% OPTIONAL PACKAGES
+%=====================================================================
+% To include optional packages, use the \usepackage command.
+% For e.g., The package epsfig is used to bring in the Encapsulated
+%    PostScript figures into the document.
+%    The package times is used to change the fonts to Times Roman;
+%=====================================================================
+\usepackage{epsfig}
+\usepackage{times}
+\usepackage{psfig}
+%=====================================================================
+%  Single counter for theorems and theorem-like environments:
+%=====================================================================
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{assertion}[theorem]{Assertion}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{figger}[theorem]{Figure}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+
+%=====================================================================
+% End of Preamble, start of document
+%
+
+\begin{document}
+
+%=====================================================================
+% Include the prelude for Title page, abstract, table of contents, etc
+% You need to modify it to contain your details
+\include{prelude}
+
+%=====================================================================
+% Include the technical part of the report
+ \include{chap_intro}
+ \include{Chap1}
+ \include{Chap2}
+              % Chapter 1: Introduction
+%% \include{chap_others}            % Other chapters as required
+%% \include{chap_conclusions}       % Finally the summary & conclusions
+
+%=====================================================================
+% APPENDIX
+%  Appendices, if any, must precede the cited literatures.
+%  Appendices shall be numbered in Roman Capitals (e.g. Appendix IV)
+
+%% \appendix
+%% \include{appendix_something}
+
+%=====================================================================
+% BIBLIOGRAPHY
+%   This should follow the appendices, if any, otherwise summary and
+%   conclusions chapter.
+% Choose your bibliography style
+% plain is the basic style, others include ieeetr, siam, asm, etc
+\bibliographystyle{plain}
+% Add the bib file
+\bibliography{san}
+
+%=====================================================================
+% PUBLICATIONS
+%  publications if any may be listed after the literature cited.
+%% \include{mypubs}
+
+%=====================================================================
+% ACKNOWLEDGMENTS
+%   This is the last item in the thesis. It should be signed by
+%   author, with date.
+\begin{acknowledgments}
+I thank the many people who have done lots of nice things for me.
+\end{acknowledgments}
+
+
+\end{document}

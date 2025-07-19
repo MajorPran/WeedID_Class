@@ -1,0 +1,15 @@
+@BOOK{mp,
+  AUTHOR =       {S. W. Matey},
+  editor =       {PHI},
+  TITLE =        {Microprocessor},
+  YEAR =         {2001},
+
+}
+
+@BOOK{vis,
+  AUTHOR =       {Vishal},
+  editor =       {PHI},
+  TITLE =        {Microprocessor},
+  YEAR =         {2001},
+
+}
